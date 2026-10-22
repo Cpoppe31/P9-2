@@ -28,3 +28,17 @@ int main() {
     return 0;
 }
 
+// Function definition
+// Counts words separated by one or more spaces without using cin or cout
+int countWords(std::string str) {
+    std::stringstream ss(str);
+    std::string word;
+    int count = 0;
+
+    // Extraction operator >> automatically skips extra whitespace
+    while (ss >> word) {
+        count++;
+    }
+
+    return count;
+}
